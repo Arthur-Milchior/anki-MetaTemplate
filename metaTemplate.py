@@ -1,7 +1,6 @@
 """Copyright: Arthur Milchior arthur@milchior.fr
 License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
 Feel free to contribute to this code on https://github.com/Arthur-Milchior/anki-MetaTemplate
-Anki add-on number:172450233
 
 A Meta Template for card's type (aka blueprient, templates)
 
@@ -383,7 +382,7 @@ def applyTemplate(template, isQuestion, enclosedIn=frozenset(),askeds=frozenset(
                  if debugMetaTemplate:
                      raise Found( "<span"+span+"/><!---Previous MetaTemplate hidden-->)" )
                  else:
-                     Found ("")
+                     raise Found ("")
             if name not in dic:
                 nonExistingMeta.add(name)
                 raise Found( "<span"+span+">Error: "+name+" does not exists"+"</span MetaTemplate='"+name+"'>")
